@@ -1,0 +1,98 @@
+ex001
+#impressao de inteiros
+N=int(input("Digite o limite máximo da impressão"))
+cont=1
+while(cont <= N):
+    print(f"{cont}")
+    cont += 1
+ex002
+#Ler a soma até que seja maior que 100.Imprimir a soma e qntd de n lidos
+soma=0
+qntd=0
+while(soma <= 100):
+    num=int(input("Digite o numero"))
+    soma=soma + num
+    qntd=qntd + 1
+    print(f"soma = {soma} quantidade = {qntd}")
+ex003
+#Faça um programa que leia o plano de trabalho e o salário atual de um funcionário e calcula e imprime o seu novo salário
+S=int(input("Digite o salario"))
+P=int(input("Digite o plano"))
+if(P==1):
+    print(f"O salario sera {S+S*10/100}")
+elif(P==2):
+    print(f"O salario sera {S+S*15/100}")
+elif(P==3):
+    print(f"O salario sera {S+S*20/100}")
+
+ex004
+#Faça um programa que imprima os números inteiros de 100 a 450 que são multiplos de 7
+nums=100
+while(nums<=450):
+    if(nums%7 == 0):
+        print(f"{nums}")
+    nums=nums+1
+
+ex005
+N = int(input("Digite a quantidade de numeros "))
+temporarios = 0
+pares = 0
+impares = 0
+i = 1
+
+while(i <= N):
+    temporarios = int(input("digite um numero "))
+
+    if(temporarios % 2 == 0):
+        pares = pares + temporarios
+    else:
+        impares = impares + 1
+
+i = i + 1
+
+print(f"A soma de todos os pares é {pares} a quantidade de impares é {impares}")
+
+ex006
+A = int(input("Digite A "))
+B = int(input("Digite B "))
+C = int(input("Digite C "))
+D = int(input("Digite D "))
+E = int(input("Digite E "))
+F = int(input("Digite F "))
+
+if((A*E) - (B*D) >= 0):
+    x = ((C*E) - (B*F)) / ((A*E) - (B*D))
+    y = ((A*F) - (C*D)) / ((A*E) - (B*D))
+    print(f"o resultado dessa equação linear é x={x} e y={y}")
+
+else:
+    print("o sistema não tem solução")
+    
+ex007
+#Contas matematicas
+A=5
+B=4
+C=3
+D=6
+if(A > C) and (C <=D):
+    print("a=verdadeira")
+else:
+    print("a=falso")
+if(A+B) >10 or (A+B) == (C+D):
+    print("b=verdadeira")
+else:
+    print("b=falso")
+if not ((A>=C)) and (D>=C):
+    print("d=verdadeira")
+else:
+    print("d=falso")
+
+ex_range
+#Elabore um programa que leia N num e imprima o maior.N é fornecido pelo usuario
+N=int(input("N= "))
+maior=int(input("num= "))
+for cont in range(1,N):
+    num=int(input("num= "))
+    if(num>maior):
+        maior=num
+print (f"De {N} numeros lidos o maior é {maior}")
