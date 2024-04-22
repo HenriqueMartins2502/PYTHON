@@ -1,0 +1,115 @@
+exercicio_slide_1
+#Construa um programa em Python que receba uma lista de 10 inteiros, via teclado e imprima toda a lista na mesma linha
+cont=0
+lista=[]
+while cont <= 10:
+    n=int(input("Digite um numero:"))
+    lista.append (n)
+    cont += 1
+print(lista)
+print(lista [5])
+
+exercicio_slide_2
+'''Construa um programa em Python que receba uma lista de 15
+inteiros, via teclado e um número. O programa deve informar se
+o número existe ou não na lista'''
+cont=0
+lista=[]
+num=int(input("Digite um número:"))
+while cont <= 15:
+    n=int(input("Adicione um número á lista:"))
+    lista.append(n)
+    cont += 1
+if num in lista:
+    print(f"O número {num} esta contido na lista")
+else:
+    print(f"O número {num} não esta contido na lista")
+print(lista)
+
+exercicio_slide_3
+'''Elabore um programa que leia e armazene 10 números reais, o
+programa deverá informar
+• A média dos elementos
+• O maior e o menor elemento
+• A quantidade de números maiores que 29.
+• Imprimir a lista lida'''
+lista=[]
+n=int(input("Digite um número real:"))
+lista.append(n)
+maior=n
+menor=n
+maior_29=0
+soma=0
+for i in range (1,10):
+    n=int(input("Digite um número real:"))
+    lista.append(n)
+    soma += n
+    media = soma / len(lista)
+    if n > 29:
+        maior_29 += 1
+    if n > maior:
+        maior = n
+    elif n < menor:
+        menor = n
+print(f"A lista é {lista}")
+print(f"Existem {maior_29} números que são maiores que 29")
+print(f"A média dos números é {media}")
+print(f"O maior número na lista é:{maior}")
+print(f"O menor número na lista é:{menor}")
+
+ex003
+'''Elabore um programa que leia uma lista de no máximo 20
+elementos inteiros. Em seguida o programa deverá imprimir
+a quantidade de valores múltiplos de 3'''
+lista=[]
+cont_3=0
+for i in range (21):
+    n=int(input("Digite um número inteiro:"))
+    lista.append(n)
+    if n % 3 == 0:
+        cont_3 += 1
+print(f"Os números múltiplos de 3 são:{cont_3}")
+
+ex004
+'''Elabore um programa que leia um conjunto de vários valores
+inteiros e os coloque em 2 listas conforme forem pares ou
+ímpares (uma lista para números pares e outra lista para
+números ímpares). A leitura dos números é finalizada
+quando um número negativo é lido.
+'''
+lista=[]
+lista_n_impar=[]
+lista_n_par=[]
+n=0
+while n >= 0: 
+    n=int(input("Digite um número:"))
+    lista.append(n)
+    if n < 0:
+        break
+    if n % 2 == 0:
+        lista_n_par.append(n)
+    else:
+        lista_n_impar.append(n)
+print(lista_n_impar)
+print(lista_n_par)
+
+ex005
+'''Elabore um programa que leia uma lista de no máximo 10
+elementos reais, o programa deverá imprimir o maior e
+segundo maior elemento e suas respectivas posições na
+lista'''
+lista=[]
+n=int(input("Digite um número:"))
+lista.append(n)
+maior=n
+segundo_maior=n
+for i in range(1,10):
+    n=int(input("Digite um número:"))
+    lista.append(n)
+    if n > maior:
+        maior = n
+    if n < segundo_maior:
+        segundo_maior = n
+    lista.remove[maior]
+print(f"O maior número é {maior}")
+print(f"O segundo maior número é {segundo_maior}")
