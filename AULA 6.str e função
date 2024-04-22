@@ -1,0 +1,131 @@
+ex001
+#Faça um programa que solicite o nome do úsuario e imprima-o na vertical
+nome=input("Digite o seu nome:")
+for letra in nome:
+    print(letra)
+
+ex002
+#Faça um programa que leia um nome e imprima as quatro primeiras letras do nome 
+nome=(input("Digite o seu nome:"))
+print(f"{nome [0:4]}")
+
+ex003
+# Elabore um programa que leia nome, sexo e idade de um usuário. Se sexo for feminino e idade menor que 25, imprime o nome da pessoa e a palavra “ACEITA”, caso contrário imprimir “NÃO ACEITA”.
+nome=(input("Digite o seu nome:"))
+sexo=(input("Digite o seu sexo(M para masculino e F para feminino:)"))
+idade=int(input("digite a sua idade:"))
+if sexo.upper() == 'F' and idade < 25:
+    print(f"{nome} ACEITA")
+else:
+    print("NÃO ACEITA")
+
+ex004
+#Construa um programa que leia duas strings fornecidas pelo usuário e verifique se a segunda string lida está contida no final da primeira, imprimindo o resultado da verificação
+string1=(input("Digite a primeira string:"))
+string2=(input("Digite a segunda string:"))
+if string1.endswith(string2):
+    print("True")
+    print("A segunda string está contida no final da primeira")
+else:
+    print("False")
+    print("A segunda string não está contida no final da primeira")
+
+ex005
+'''Escreva um programa que leia a idade e o primeiro nome de
+várias pessoas. Seu programa deve terminar quando uma
+idade negativa for digitada. Ao terminar, seu programa deve
+escrever o nome e a idade da pessoa mais jovem e mais
+velha.
+'''
+idade=0
+idade_velho=0
+idade_novo=0
+nome_novo=0
+nome_velho=0
+while idade >= 0:
+    nome=input("Digite o seu nome:")
+    idade=int(input("Digite a sua idade:"))
+    if idade < 0:
+        break 
+    elif idade > idade_velho:
+        idade_velho = idade
+        nome_velho = nome
+    elif idade < idade_velho:
+        idade_novo = idade
+        nome_novo = nome
+print(f"O nome da pessoa mais velha é {nome_velho.title()} e a sua idade é {idade_velho}")
+print(f"O nome da pessoa mais nova é {nome_novo.title()} e a sua idade é {idade_novo}")
+
+ex006
+'''Faça um programa que, dada uma string, diga se ela e um
+palíndromo ou não. Lembrando que um palíndromo e uma
+palavra que tenha a propriedade de poder ser lida tanto da
+direita para a esquerda como da esquerda para a direita.
+• Exemplo:
+• ovo
+• arara'''
+s=input("Digite uma frase qualquer:")
+sem_espaço=(s.replace(" ",""))#defini essa variavel para que seja possivel verificar um palindromo em frases pois se contar o espaço obviamente n funciona
+if sem_espaço.lower() == sem_espaço.lower() [::-1]:
+    print(f"A string {s.title()} é um um palíndromo")
+else:
+    print(f"A string {s.title()} não é um palíndromo")
+
+exercicio_slide_1
+#Ler uma frase e contar quantos caracteres sao espaços em branco
+txt=(input("Digite uma frase:"))
+cont=0
+for k in range(len(txt)):
+    if txt[k] ==' ':
+        cont+=1
+print(f'Na frase {txt} há {cont} espaços em branco')
+
+exercicio_slide_2
+#Faça um programa que lê uma string de no máximo 20 caracteres e no final imprime quantas letras 'a' tem nesse string
+s = ''
+cont = 0
+while(len(s) > 20 or len(s) < 1):
+    s=input("Digite uma frase de no máximo 20 caracteres: ")
+    if(len(s) > 20):
+        print("Você digitou uma frase com mais de 20 caracteres")
+for k in range (len(s)):
+    if s[k] == 'a':
+        cont = cont+1
+if cont == 0:
+    print("Não existe letras a na frase")
+else:
+    print(f"Existe {cont} letra(s) 'a' na frase digitada")
+
+exercicio_slide_3
+#Faça um programa que leia o nome e o sobrenome de uma pessoa o programa deve escrever o nome e o sobrenome numa única string.Deverá ser impreso a nova string,o tamanho dela,a primeira e a última letra
+nome=input("Digite o seu nome:")
+sobrenome=input("Digite o seu sobrenome:")
+nome_completo=nome + " " + sobrenome 
+print(f"Seu nome completo é {nome_completo}")
+print(f"Ele possui {len(nome_completo)} caracteres")
+print(f"Sendo o primeiro caractere {nome_completo[0]}")
+print(f"Sendo o último caractere {nome_completo[-1]}")
+
+exercicio_slide_4
+#Faça um programa que receba do úsuario uma string.O programa imprime a string sem suas vogais
+TXT=input("Digite uma frase:")
+s=TXT.lower()
+s=s.replace('a','')
+s=s.replace('e','')
+s=s.replace('i','')
+s=s.replace('o','')
+s=s.replace('u','')
+print(s)
+
+diversas variações de string:
+nome=input('digite seu nome completo:')
+nome=(nome.lower())
+print('silva' in nome)
+print(nome.count('silva'))
+print(nome.upper())
+print(nome.lower())
+print(nome.lstrip())
+print(len(nome))
+print(len(nome.strip()))
+nome=(nome.split())
+print(len(nome[0]))
