@@ -138,3 +138,23 @@ print(idade)
 print(altura)
 print(media)
 print(alunos_inf)
+
+ex007
+'''Construa um programa que leia dois números inteiros: a e b
+e uma lista com N valores inteiros (N = 10).
+O programa deverá imprimir quantos elementos da Lista
+pertencem ao intervalo [a;b]
+'''
+lista=[]
+a=int(input("Digite um número(a):"))
+b=int(input("Digite um número(b):"))
+elementos=0
+for i in range(1,11):
+    n=int(input("Digite um número: "))
+    lista.append(n)
+    if n < 0:
+        break
+    if n > a and n < b:
+        elementos += 1
+print(lista)
+print(f"Os elementos da lista que pertecem ao intervalo 'a' e 'b' são: {elementos}")
