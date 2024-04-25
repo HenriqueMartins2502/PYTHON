@@ -212,3 +212,33 @@ for i in range(10):
     alunos.append(nota)
     print(alunos)
     print(f"O gabarito é {GAB}")
+
+desafio002
+'''Utilizando listas faça um programa que faça 5 perguntas para uma
+pessoa sobre um crime. As perguntas são:
+a. "Telefonou para a vítima?"
+b. "Esteve no local do crime?"
+c. "Mora perto da vítima?"
+d. "Devia para a vítima?"
+e. "Já trabalhou com a vítima?"
+O programa deve no final emitir uma classificação sobre a
+participação da pessoa no crime. Se a pessoa responder
+positivamente a 2 questões ela deve ser classificada como
+"Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino".
+Caso contrário, ele será classificado como "Inocente".'''
+respostas = []
+print("Responda com 'S' para sim e 'N' para não:")
+respostas.append(input("a. Telefonou para a vítima? ").lower())
+respostas.append(input("b. Esteve no local do crime? ").lower())
+respostas.append(input("c. Mora perto da vítima? ").lower())
+respostas.append(input("d. Devia para a vítima? ").lower())
+respostas.append(input("e. Já trabalhou com a vítima? ").lower())
+positivas = respostas.count('s')
+if positivas == 2:
+    print("Suspeito!")
+elif 3 <= positivas <= 4:
+    print("Cúmplice!")
+elif positivas == 5:
+    print(" Assassino!")
+else:
+    print("Inocente!")
