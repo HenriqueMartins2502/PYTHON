@@ -161,3 +161,54 @@ for i in range(quantidade_n):
         elementos += 1
 print(lista)
 print(f"Os elementos da lista que pertecem ao intervalo 'a' e 'b' são: {elementos}")
+
+desafio001
+'''Construa um programa que seja constituído de uma lista
+GAB de 10 elementos caracteres ( esta lista pode ser
+constituída somente dos caracteres a, b, c, d e e. O programa
+irá ler o nome e a resposta de 10 alunos de uma turma e
+deverá imprimir a nota de cada aluno (considerando que
+cada questão vale 1,0 ponto). O programa deverá também
+imprimir a média da sala
+'''
+GAB=['a','b','c','d','e','a','b','b','b','d']
+alunos=[]
+nota=0
+media=0
+for i in range(2):
+    n=input("Digite o seu nome:")
+    alunos.append(n)
+    nota=0
+    n1=input("1:")
+    n2=input("2:")
+    n3=input("3:")
+    n4=input("4:")
+    n5=input("5:")
+    n6=input("6:")
+    n7=input("7:")
+    n8=input("8:")
+    n9=input("9:")
+    n10=input("10:")
+    if n1 == GAB[0]:
+        nota += 1
+    if n2 == GAB[1]:
+        nota += 1
+    if n3 == GAB[2]:
+        nota += 1
+    if n4 == GAB[3]:
+        nota += 1
+    if n5 == GAB[4]:
+        nota += 1
+    if n6 == GAB[5]:
+        nota += 1
+    if n7 == GAB[6]:
+        nota += 1
+    if n8 == GAB[7]:
+        nota += 1
+    if n9 == GAB[8]:
+        nota += 1
+    if n10 == GAB[9]:
+        nota += 1
+    alunos.append(nota)
+    print(alunos)
+    print(f"O gabarito é {GAB}")
