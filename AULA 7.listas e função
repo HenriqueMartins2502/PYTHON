@@ -175,7 +175,7 @@ GAB=['a','b','c','d','e','a','b','b','b','d']
 alunos=[]
 nota=0
 media=0
-for i in range(2):
+for i in range(10):
     n=input("Digite o seu nome:")
     alunos.append(n)
     nota=0
