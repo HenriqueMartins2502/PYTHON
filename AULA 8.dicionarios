@@ -79,7 +79,6 @@ for i in range(num_livros):
 opcao = int(input("Escolha uma opção (1-buscar por título, 2-buscar por código, 3-livros acima de R$50.00): "))
 if opcao == 1:
     buscar_titulo = input("Digite o título do livro para buscar: ")
-    livros_acima_50=False
     for codigo, dados in livros.items():
         if dados[0] == buscar_titulo:
             print(f"Código: {codigo}")
