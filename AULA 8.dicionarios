@@ -1,0 +1,107 @@
+Exemplo de uso de dicionarios
+'''Exemplos de uso de um dicionario(dici) e (estoque)'''
+dici={'cadeira':135.40}
+print(dici.keys())
+print(dici.values())
+dici['sofa']=3450
+print(dici)
+print("--------------------------------------------------")
+#Usando o comando 'for'
+for produto,preço in dici.items():
+    print(f"Produto: {produto} \nPreço: {preço}")
+print("--------------------------------------------------")
+#Dicionario com listas
+estoque={'cadeira':[250.56,10], 'mesa':[1800,3], 'estante':[2453,22]}
+print(len(estoque))
+print(estoque)
+print(estoque['cadeira'])
+print(estoque['cadeira'][0])
+print("--------------------------------------------------")
+#Unindo dois dicionarios
+estoque2={'sofa':[3450,3]}
+estoque.update(estoque2)
+print(estoque)
+print("--------------------------------------------------")
+#Verificando se a chave existe
+'sofa' in estoque
+print('sofa' in estoque)
+print("--------------------------------------------------")
+#dict.get usado para obter o valor de uma especifica chave de um dicionario
+print(estoque.get('mesa'))
+print("--------------------------------------------------")
+#fromkeys(seq,val)
+seq={1,2,3,4,5}
+novo={}
+novo=novo.fromkeys(seq)
+print(novo)
+outro={}
+outro=outro.fromkeys(seq,10)
+print(outro)
+
+Atividade 1
+'''Seja a seguinte definição de uma estrutura de dados
+representando um livro:
+• código do livro: número inteiro
+• título: string
+• número de autores: número inteiro
+de acordo com o número de autores nomes dos
+autores: string
+• preço: número real
+Python
+• Exercícios Vamos praticar!!!!!
+Você irá trabalhar com dicionários e listas
+Crie um dicionário de livros, onde o código do livro é a chave e
+este dicionário, para cada chave é constituído de uma lista com
+as outras informações (Veja os exemplos acima)
+Na construção do programa use o tratamento de exceções
+Após a leitura dos dados, realizara as seguintes tarefas
+• Buscar um livro pelo título, imprimir todas as suas informações
+se ele existir
+• Buscar um livro pelo código, imprimir todas as suas
+informações se ele existir
+• imprimir os dados dos livros com preço superior a R$50.00.
+Apresente os dados no formato de uma tabela'''
+livros = {}
+num_livros = int(input("Digite o número de livros (Digite um número negativo para parar): "))
+
+for i in range(num_livros):
+        codigo=int(input(f"Digite o código do livro {i+1}: "))
+        if codigo < 0:
+            break
+        titulo=input(f"Digite o título do livro {i+1}: ")
+        num_autores=int(input(f"Digite o número de autores do livro {i+1}: "))
+        autores=[]
+        for k in range(num_autores):
+            autor=input(f"Digite o nome do autor {k+1} do livro {i+1}: ")
+            autores.append(autor)
+        preço = float(input(f"Digite o preço do livro {i+1}: "))
+        livros[codigo] = [titulo, num_autores, autores, preço]
+opcao = int(input("Escolha uma opção (1-buscar por título, 2-buscar por código, 3-livros acima de R$50.00): "))
+if opcao == 1:
+    buscar_titulo = input("Digite o título do livro para buscar: ")
+    livros_acima_50=False
+    for codigo, dados in livros.items():
+        if dados[0] == buscar_titulo:
+            print(f"Código: {codigo}")
+            print(f"Título: {dados[0]}")
+            print(f"Número de autores: {dados[1]}")
+            print(f"Preço: R${dados[3]:.2f}")
+            for autor in dados[2]:
+                print(f"Autor: {autor} ",end='')
+elif opcao == 2:
+    buscar_codigo = int(input("Digite o código do livro para buscar: "))
+    if buscar_codigo in livros:
+        dados = livros[buscar_codigo]
+        print(f"Código: {buscar_codigo}")
+        print(f"Título: {dados[0]}")
+        print(f"Número de autores: {dados[1]}")
+        print(f"Preço: R${dados[3]:.2f}")
+        for autor in dados[2]:
+            print(f"Autor: {autor} ",end='')
+elif opcao == 3:
+    for codigo, dados in livros.items():
+        if dados[3] > 50.0:
+            print(f"Código: {codigo}")
+            print(f"Titulo: {dados[0]}")
+            print(f"Preço: R${dados[3]:.2f}")
+
