@@ -1,0 +1,32 @@
+ex001
+'''Elabore uma função que dado um número inteiro ela imprima o seu sucessor e o seu antecessor'''
+#Exemplo eu e capo
+def print_sucessor_antecessor (num):
+    sucessor = num + 1
+    antecessor = num - 1
+    print(f"O sucessor é {sucessor}")
+    print(f"O antecessor é {antecessor}")
+print_sucessor_antecessor(5)
+
+#Exemplo Lucia
+def suc_ant (x):
+    print(f"O sucessor de {x} é {x + 1}")
+    print(f"O antcessor de {x} é {x - 1}")
+num=int(input("Digite um número:"))
+suc_ant(num)
+
+ex002
+'''Elabore um programa que possue duas funções:
+-Uma função que leia um numero inteiro
+-Uma função que some tres valores inteiros
+-O programa deverá ler três valores inteiros e imprimir a soma desses valores,usando as funções acima'''
+def ler_num(num):
+    n="Digite o "+num+"numero:"
+    a=int(input(n))
+    return a
+def soma(um,dois,tres):
+    return(um + dois + tres)
+a=ler_num("primeiro ")
+b=ler_num("segundo ")
+c=ler_num("terceiro ")
+print(f"{a} + {b} + {c} = {soma(a,b,c)}")
