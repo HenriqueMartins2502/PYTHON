@@ -1,0 +1,38 @@
+ex022
+nome=str(input("Digite seu nome completo:")).strip()
+print("Seu nome em maisculas é:",nome.upper())
+print("Seu nome em minusculas é:",nome.lower())
+print(f"Seu nome tem ao todo {len(nome)} letras")
+print(f"Seu primeiro nome tem {nome.find(' ')} letras")
+
+ex025
+nome=input("Digite o seu nome:").strip()
+print(f"Seu nome tem Silva?:{'silva'in nome.lower()}")
+
+ex039
+from datetime import date 
+atual=date.today().year
+nasc=int(input("Ano de nascimento:"))
+idade= atual - nasc
+print(f"Quem nasceu em {nasc} tem {idade} anos em {atual}")
+if idade == 18:
+    print("Você deve se alistar IMEDIATAMENTE!!!!")
+elif idade < 18:
+    qnt_tempo= 18 - idade
+    print(f"Ainda faltam {qnt_tempo} ano(s) para o alistamento")
+elif idade > 20:
+    qnt_tempo= idade - 18
+    print(f"Você ja deveria ter se alistado há {qnt_tempo} anos")
+
+ex047
+'''Crie um programa que mostre na tela todos os números pares que estão no intervalo entre 1 e 50.'''
+
+for i in range(2,51,2):
+    print(i)
+
+ex049
+'''Crie um programa que mostre na tela todos os números pares que estão no intervalo entre 1 e 50.'''
+
+num=int(input("Digite o número que deseja ver a tabuada:"))
+for i in range(1,11):
+    print(f"{num} x {i} = {num * i}")
