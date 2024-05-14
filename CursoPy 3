@@ -231,3 +231,56 @@ if dados['ctps'] != 0:
 print('-'*30)
 for k,v in dados.items():
     print(f"{k} tem o valor {v}")
+
+ex093
+'''Crie um programa que gerencie o aproveitamento de um jogador de futebol. O programa vai ler o nome do jogador e quantas partidas ele jogou.
+ Depois vai ler a quantidade de gols feitos em cada partida. 
+No final, tudo isso será guardado em um dicionário, incluindo o total de gols feitos durante o campeonato.'''
+soma=0
+jogador={}
+jogador['nome']=str(input("Nome: "))
+jogador['partidas']=int(input("Total de partidas: "))
+for i in range(jogador['partidas']):
+    i=int(input(f"Quantos gols o jogador marcou na partida {i+1}: "))
+    soma+=i
+for k,v in jogador.items():
+    print(f"{k} tem o valor {v}")
+print(f"O total de gols marcados por {jogador['nome']} em {jogador['partidas']} partidas foram {soma} ")
+
+ex094
+'''Crie um programa que leia nome, sexo e idade de várias pessoas, guardando os dados de 
+cada pessoa em um dicionário e todos os dicionários em uma lista. No final, mostre:
+ A) Quantas pessoas foram cadastradas B) A média de idade 
+ C) Uma lista com as mulheres D) Uma lista de pessoas com idade acima da média'''
+soma = media = 0
+galera=[]
+pessoas={}
+mulheres=[]
+while True:
+    pessoas.clear()
+    pessoas['nome']=str(input("Nome: "))
+    while True:
+        pessoas['sexo']=str(input("Sexo[M ou F: ]")).upper()[0]
+        if pessoas['sexo'] in 'MF':
+            break
+    pessoas['idade']=int(input("Idade: "))
+    soma += pessoas['idade']
+    galera.append(pessoas.copy())
+    while True:
+        resposta=str(input("Quer continuar? [S ou N]")).upper()[0]
+        if resposta in 'SN':
+            break
+    if resposta == 'N':
+        break   
+media = soma / len(galera)
+print(f"Pessoas cadastradas: {len(galera)}")
+print(f"A média de idade é: {media:.2f}")
+print(f"As mulheres cadastradas foram:",end='')
+for pessoas in galera:
+    if pessoas['sexo'] in 'Ff':
+        print(f"{pessoas['nome']}",end='')  
+    print()
+print("Lista de pessoas acima da media:",end='')
+for pessoas in galera:
+    if pessoas['idade'] >= media:
+        print(f"{pessoas['nome']}",end='')
