@@ -1,0 +1,245 @@
+
+exercicio_slide_1
+#Construa um programa em Python que receba uma lista de 10 inteiros, via teclado e imprima toda a lista na mesma linha
+cont=0
+lista=[]
+while cont <= 10:
+    n=int(input("Digite um numero:"))
+    lista.append (n)
+    cont += 1
+print(lista)
+print(lista [5])
+
+exercicio_slide_2
+'''Construa um programa em Python que receba uma lista de 15
+inteiros, via teclado e um número. O programa deve informar se
+o número existe ou não na lista'''
+cont=0
+lista=[]
+num=int(input("Digite um número:"))
+while cont <= 15:
+    n=int(input("Adicione um número á lista:"))
+    lista.append(n)
+    cont += 1
+if num in lista:
+    print(f"O número {num} esta contido na lista")
+else:
+    print(f"O número {num} não esta contido na lista")
+print(lista)
+
+exercicio_slide_3
+'''Elabore um programa que leia e armazene 10 números reais, o
+programa deverá informar
+• A média dos elementos
+• O maior e o menor elemento
+• A quantidade de números maiores que 29.
+• Imprimir a lista lida'''
+lista=[]
+n=int(input("Digite um número real:"))
+lista.append(n)
+maior=n
+menor=n
+maior_29=0
+soma=0
+for i in range (1,10):
+    n=int(input("Digite um número real:"))
+    lista.append(n)
+    soma += n
+    media = soma / len(lista)
+    if n > 29:
+        maior_29 += 1
+    if n > maior:
+        maior = n
+    elif n < menor:
+        menor = n
+print(f"A lista é {lista}")
+print(f"Existem {maior_29} números que são maiores que 29")
+print(f"A média dos números é {media}")
+print(f"O maior número na lista é:{maior}")
+print(f"O menor número na lista é:{menor}")
+
+ex003
+'''Elabore um programa que leia uma lista de no máximo 20
+elementos inteiros. Em seguida o programa deverá imprimir
+a quantidade de valores múltiplos de 3'''
+lista=[]
+cont_3=0
+for i in range (21):
+    n=int(input("Digite um número inteiro:"))
+    lista.append(n)
+    if n % 3 == 0:
+        cont_3 += 1
+print(f"Os números múltiplos de 3 são:{cont_3}")
+
+ex004
+'''Elabore um programa que leia um conjunto de vários valores
+inteiros e os coloque em 2 listas conforme forem pares ou
+ímpares (uma lista para números pares e outra lista para
+números ímpares). A leitura dos números é finalizada
+quando um número negativo é lido.
+'''
+lista=[]
+lista_n_impar=[]
+lista_n_par=[]
+n=0
+while n >= 0: 
+    n=int(input("Digite um número:"))
+    lista.append(n)
+    if n < 0:
+        break
+    if n % 2 == 0:
+        lista_n_par.append(n)
+    else:
+        lista_n_impar.append(n)
+print(lista_n_impar)
+print(lista_n_par)
+
+ex005
+'''Elabore um programa que leia uma lista de no máximo 10
+elementos reais, o programa deverá imprimir o maior e
+segundo maior elemento e suas respectivas posições na
+lista'''
+lista=[]
+n=int(input("Digite um número:"))
+lista.append(n)
+maior=n
+segundo_maior=n
+for i in range(1,10):
+    n=int(input("Digite um número:"))
+    lista.append(n)
+    if n > maior:
+        maior = n
+    if n < segundo_maior:
+        segundo_maior = n
+    lista.remove[maior]
+print(f"O maior número é {maior}")
+print(f"O segundo maior número é {segundo_maior}")
+
+ex006
+'''Foram anotadas as idades e alturas de 30 alunos. Faça um
+programa que determine quantos alunos com mais de 13
+anos possuem altura inferior à média de altura desses
+alunos.'''
+idade=[]
+altura=[]
+media=0
+soma=0
+alunos_inf=0
+for i in range(5):
+    n=int(input("Digite a idade do aluno:"))
+    x=float(input("Digite a altura do aluno:"))
+    soma += x
+    idade.append(n)
+    altura.append(x)
+media = soma / len(altura)
+for i in range(5):
+    if idade[i] > 13 and altura[i] < media:
+        alunos_inf += 1
+print(idade)
+print(altura)
+print(media)
+print(alunos_inf)
+
+ex007
+'''Construa um programa que leia dois números inteiros: a e b
+e uma lista com N valores inteiros (N = 10).
+O programa deverá imprimir quantos elementos da Lista
+pertencem ao intervalo [a;b]
+'''
+lista=[]
+quantidade_n=int(input("Quantos números deseja digitar?"))
+a=int(input("Digite um número(a):"))
+b=int(input("Digite um número(b):"))
+elementos=0
+for i in range(quantidade_n):
+    n=int(input("Digite um número: "))
+    lista.append(n)
+    if n < 0:
+        break
+    if n > a and n < b:
+        elementos += 1
+    elif n < a and n > b:
+        elementos += 1
+print(lista)
+print(f"Os elementos da lista que pertecem ao intervalo 'a' e 'b' são: {elementos}")
+
+desafio001
+'''Construa um programa que seja constituído de uma lista
+GAB de 10 elementos caracteres ( esta lista pode ser
+constituída somente dos caracteres a, b, c, d e e. O programa
+irá ler o nome e a resposta de 10 alunos de uma turma e
+deverá imprimir a nota de cada aluno (considerando que
+cada questão vale 1,0 ponto). O programa deverá também
+imprimir a média da sala
+'''
+GAB=['a','b','c','d','e','a','b','b','b','d']
+alunos=[]
+nota=0
+media=0
+for i in range(10):
+    n=input("Digite o seu nome:")
+    alunos.append(n)
+    nota=0
+    n1=input("1:")
+    n2=input("2:")
+    n3=input("3:")
+    n4=input("4:")
+    n5=input("5:")
+    n6=input("6:")
+    n7=input("7:")
+    n8=input("8:")
+    n9=input("9:")
+    n10=input("10:")
+    if n1 == GAB[0]:
+        nota += 1
+    if n2 == GAB[1]:
+        nota += 1
+    if n3 == GAB[2]:
+        nota += 1
+    if n4 == GAB[3]:
+        nota += 1
+    if n5 == GAB[4]:
+        nota += 1
+    if n6 == GAB[5]:
+        nota += 1
+    if n7 == GAB[6]:
+        nota += 1
+    if n8 == GAB[7]:
+        nota += 1
+    if n9 == GAB[8]:
+        nota += 1
+    if n10 == GAB[9]:
+        nota += 1
+    alunos.append(nota)
+    print(alunos)
+    print(f"O gabarito é {GAB}")
+
+desafio002
+'''Utilizando listas faça um programa que faça 5 perguntas para uma
+pessoa sobre um crime. As perguntas são:
+a. "Telefonou para a vítima?"
+b. "Esteve no local do crime?"
+c. "Mora perto da vítima?"
+d. "Devia para a vítima?"
+e. "Já trabalhou com a vítima?"
+O programa deve no final emitir uma classificação sobre a
+participação da pessoa no crime. Se a pessoa responder
+positivamente a 2 questões ela deve ser classificada como
+"Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino".
+Caso contrário, ele será classificado como "Inocente".'''
+respostas = []
+print("Responda com 'S' para sim e 'N' para não:")
+respostas.append(input("a. Telefonou para a vítima? ").lower())
+respostas.append(input("b. Esteve no local do crime? ").lower())
+respostas.append(input("c. Mora perto da vítima? ").lower())
+respostas.append(input("d. Devia para a vítima? ").lower())
+respostas.append(input("e. Já trabalhou com a vítima? ").lower())
+positivas = respostas.count('s')
+if positivas == 2:
+    print("Suspeito!")
+elif 3 <= positivas <= 4:
+    print("Cúmplice!")
+elif positivas == 5:
+    print(" Assassino!")
+else:
+    print("Inocente!")
