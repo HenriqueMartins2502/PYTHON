@@ -1,0 +1,53 @@
+
+ex001
+#Elabore um programa que leia um número inteiro e imprima se ele é par ou impar
+num=int(input("Digite um número"))
+if(num % 2 == 0):
+    print("O número é par")
+else:
+    print("O número é ímpar")
+
+ex002
+#Construa um programa que leia os lados de um quadrilátero e determine se é um quadrado ou um retangulo
+L1=int(input("Digite o primeiro lado"))
+L2=int(input("Digite o segundo lado"))
+if(L1>L2):
+    print("é um retangulo")
+else:
+    print("é um quadrilatero")
+
+ex003
+#Faça um Programa que peça dois números e imprima o maior deles
+N1=int(input("Digite um numero"))
+N2=int(input("Digite um numero"))
+if(N1>N2):
+    print(f"o maior é {N1}")
+else:
+    print(f"O maior é {N2}")
+
+ex004
+#Faça um Programa que peça um valor e mostre na tela se o valor é positivo,negativo ou nulo
+V1=int(input("Digite um numero"))
+if(V1>0):
+    print("O valor é positivo")
+if(V1<0):
+    print("O valor é negativo")
+if(V1==0):
+    print("O valor é nulo")
+
+ex005
+#Crie um algoritmo que receba do usuário um número qualquer e verifique se é multiplo de 5
+n=int(input("Digite um numero"))
+if(n % 5 == 0):
+    print("O número é multiplo de 5")
+else:
+    print("O número não é multiplo de 5")
+
+ex006
+#Construir um programa que faz a leitura de dois valores inteiros A e B Se os valores forem iguais deverá somar os dois, caso contrário multiplique A por B
+A=int(input("Digite um numero"))
+B=int(input("Digite um numero"))
+if(A==B):
+    print(f"O número é {A + B}")
+else:
+    print(f"O número é {A * B}")
